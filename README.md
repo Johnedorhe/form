@@ -1,16 +1,61 @@
-# React + Vite
+# React Form Authentication App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple React app demonstrating user authentication (login, registration, dashboard) using Firebase Auth and React Router.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User registration with email and password
+- User login with email and password
+- Password visibility toggle
+- Form validation with react-hook-form and yup
+- Dashboard page (protected)
+- Persistent login (browser local storage)
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Firebase Auth
+- React Router DOM
+- React Hook Form
+- Yup
+- Tailwind CSS (for styling)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Clone the repository
+
+```
+git clone <repo-url>
+cd form
+```
+
+### 2. Install dependencies
+
+```
+npm install
+```
+
+### 3. Set up Firebase
+
+- Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+- Enable Email/Password authentication
+- Copy your Firebase config and update `src/firebase.js`
+
+### 4. Run the app
+
+```
+npm run dev
+```
+
+The app will be available at `http://localhost:5173` (or as shown in your terminal).
+
+## Folder Structure
+
+- `src/pages/` — Contains page components (login, register, dashboard)
+- `src/firebase.js` — Firebase configuration
+- `src/App.jsx` — Main app component
+
+## License
+
+MIT
